@@ -46,10 +46,13 @@ concurrency:
 permissions:
   contents: read
   actions: write
+  pages: write
+  id-token: write
 
 jobs:
   crawl:
     runs-on: ubuntu-latest
+    environment: github-pages
     timeout-minutes: 15
 
     steps:
