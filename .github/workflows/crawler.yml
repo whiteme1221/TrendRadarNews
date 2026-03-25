@@ -50,7 +50,7 @@ concurrency:
   cancel-in-progress: true
 
 permissions:
-  contents: read
+  contents: write
   actions: write
   pages: write
   id-token: write
