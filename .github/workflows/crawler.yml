@@ -167,3 +167,16 @@ jobs:
           S3_REGION: ${{ secrets.S3_REGION }}
           GITHUB_ACTIONS: true
         run: python -m trendradar
+
+        
+      # 👇 下面这两段是修复 Pages 显示的关键
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload HTML
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: output/html
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
