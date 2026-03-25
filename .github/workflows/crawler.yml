@@ -175,7 +175,7 @@ jobs:
           S3_ENDPOINT_URL: ${{ secrets.S3_ENDPOINT_URL }}
           S3_REGION: ${{ secrets.S3_REGION }}
           GITHUB_ACTIONS: true
-        run: python -m trendradar
+        run: python -m trendradar  --mode real-time
 
         
       # 👇 下面这两段是修复 Pages 显示的关键
