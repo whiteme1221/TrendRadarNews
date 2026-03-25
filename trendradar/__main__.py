@@ -1499,10 +1499,10 @@ class NewsAnalyzer:
         schedule = scheduler.resolve()
 
         # 使用 schedule 决定的 report_mode 覆盖全局配置
-        effective_mode = schedule.report_mode
+        effective_mode = "current"
         if effective_mode != self.report_mode:
-            print(f"[调度] 报告模式覆盖: {self.report_mode} -> {effective_mode}")
-        self.report_mode = effective_mode
+            print(f"[调度] 报告模式覆盖: {self.report_mode} -> current")
+        self.report_mode = "current"
 
         # 重新获取 mode_strategy，确保 report_type 与覆盖后的 report_mode 一致
         mode_strategy = self._get_mode_strategy()
